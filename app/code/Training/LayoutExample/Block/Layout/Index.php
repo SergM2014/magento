@@ -24,4 +24,9 @@ class Index extends Template
     {
         return "Learn Magento 2 development";
     }
+
+    public function getnodeHtml(): string
+    {
+        return $this->getLayout()->createBlock(Note::class)->toHtml();
+    }
 }

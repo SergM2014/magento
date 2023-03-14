@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout">
+    <head>
+        <title>Layout Example</title>
+    </head>
+    <body>     
+        <referenceContainer name="content">
+            <block name="Layout_example" class="Training\LayoutExample\Block\Layout\Index"
+                template="Training_LayoutExample::content.phtml" />
+        </referenceContainer>
+    </body>
+</page>

@@ -11,6 +11,11 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout">
                 <block name="layout_note" class="Training\LayoutExample\Block\Layout\Note"
                 template="Training_LayoutExample::note.phtml" />
             </block>
+            <block name="cms_block_example" class="Magento\Cms\Block\Block">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">cms_block_example</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>

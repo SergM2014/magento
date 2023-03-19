@@ -7,6 +7,11 @@
                 template="Training_HeaderFooterScripts::head_additional/header_footer_scripts.phtml" 
                 class="Magento\Framework\View\Element\Template" />
         </referenceBlock>
+        <referenceBlock name="after.body.start">
+            <block name="after_body_start_header_footer_script" 
+                template="Training_HeaderFooterScripts::body_start/header_footer_script.phtml"
+                class="Magento\Framework\View\Element\Template" />
+        </referenceBlock>
         
     </body>
 </page>

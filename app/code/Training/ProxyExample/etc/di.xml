@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/di.xsd">
+    <preference for="Namespace\Modul\Model\SomeleInterface"
+        type="Namespace\modul\Model\SomeClass"/>
+    <type name="Training\ProxyExample\Model\FeaturedProducts">
+        <arguments>
+            <argument name="featuredBySales" xsi:type="object">Training\ProxyExample\Model\FeaturedProducts\FeaturedBySales\Proxy</argument>
+        </arguments>
+    </type>
+</config>

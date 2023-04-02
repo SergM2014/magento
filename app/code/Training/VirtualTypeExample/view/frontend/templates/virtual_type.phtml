@@ -1,0 +1,11 @@
+<h2>VirtualTypeExample</h2>
+
+<?php $warehouse = $block->getViewModel()->getWarehouse($block->getRequest()); ?>
+
+<?php if (!$warehouse->isEmpty()): ?>
+<p>
+  
+    <?= $warehouse->getName() ?> ' : ' <?= $warehouse->getPostcode() ?>
+</p>
+
+<?php endif; ?>

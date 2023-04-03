@@ -6,7 +6,7 @@ namespace Training\VirtualTypeExample\ViewModel;
 
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
-use Training\VirtualTypeExample\Api\WarehouseRepositoryInterface;
+use Training\WarehouseManagement\Api\WarehouseRepositoryInterface;
 
 class Example implements ArgumentInterface
 {

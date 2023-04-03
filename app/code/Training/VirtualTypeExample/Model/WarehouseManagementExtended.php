@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Training\VirtualTypeExample\Model;
 
+use Training\WarehouseManagement\Model\WarehouseManagement;
+
 class WarehouseManagementExtended extends WarehouseManagement
 {
     public function getAllWarehouses(): array
@@ -22,5 +24,14 @@ class WarehouseManagementExtended extends WarehouseManagement
         ];
 
         return array_merge(parent::getAllWarehouses(), $extraWarehouses);
+
+       ;
+    }
+
+    public function getDiscontinuedWarehouses(): array
+    {
+        return [
+            'lon1'
+        ];
     }
 }

@@ -5,17 +5,23 @@ declare(strict_types=1);
 namespace Training\VirtualTypeExample\Model;
 
 use Magento\Framework\DataObject;
-use Training\VirtualTypeExample\Api\WarehouseManagementInterface;
-use Training\VirtualTypeExample\Api\WarehouseRepositoryInterface;
 
-class WarehouseRepository implements WarehouseRepositoryInterface
+// use Training\WarehouseManagement\Model\WarehouseRepository;
+
+class WarehouseRepository extends \Training\WarehouseManagement\Model\WarehouseRepository
 {
     public function __construct(
-        protected WarehouseManagementInterface $warehouseManagement
-    ) {}
+         WarehouseManagementExtended $warehouseManagement
+    ) 
+    {
+         parent::__construct($warehouseManagement); 
+    }
 
     public function newWarehouse(string $code): DataObject
     {
-        return new DataObject($this->warehouseManagement->getWarehouseInfo($code));
+        if (in_array($code, $this->warehouseManagement->getDiscontinuedWarehouses())) {
+            throw new \Exception('warehouse is no longer exists');
+        }
+        return parent::newWarehouse($code);
     }
 }

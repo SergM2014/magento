@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xcd">
-        <module name="Training_VirtualTypeExample" >
-            <sequence>
-                <module name="Training_WarehouseManagement" />
-            </sequence>
-        </module>
+        <module name="Taining_WarehouseManagement" />
 </config>

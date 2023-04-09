@@ -9,17 +9,7 @@ use Magento\Framework\Event\ManagerInterface;
 
 class DeliveryTypes
 {
-    /**
-     * @var ManagerInterface
-     */
-    protected ManagerInterface $eventManager;
-
-    /**
-     * DeliveryTypes constructor.
-     *
-     * @param ManagerInterface $eventManager
-     */
-    public function __construct(ManagerInterface $eventManager)
+    public function __construct(protected ManagerInterface $eventManager)
     {
         $this->eventManager = $eventManager;
     }

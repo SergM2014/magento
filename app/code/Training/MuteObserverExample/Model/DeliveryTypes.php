@@ -9,10 +9,7 @@ use Magento\Framework\Event\ManagerInterface;
 
 class DeliveryTypes
 {
-    public function __construct(protected ManagerInterface $eventManager)
-    {
-        $this->eventManager = $eventManager;
-    }
+    public function __construct(protected ManagerInterface $eventManager) {} 
 
     public function toDataObject(): DataObject
     {

@@ -14,7 +14,7 @@ class Index implements ActionInterface
     public function execute()
     {
         $page = $this->pageFactory->create();
-        $page->getConfig()->getTitle()->set('IfConfig Example');
+        //$page->getConfig()->getTitle()->set('IfConfig Example');
         return $page;
     }
 }

@@ -28,3 +28,7 @@ $bootstrap = Bootstrap::create(BP, $_SERVER);
 /** @var \Magento\Framework\App\Http $app */
 $app = $bootstrap->createApplication(\Magento\Framework\App\Http::class);
 $bootstrap->run($app);
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$xmlLayout = $objectManager->get(\Magento\Framework\App\View::class);
+var_dump($xmlLayout->getLayout()->getUpdate()->getHandles());

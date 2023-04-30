@@ -9,11 +9,7 @@ use Magento\Framework\Controller\Result\RawFactory;
 
 class Index implements ActionInterface
 {
-    protected $resultFactory;
-    public function __construct(RawFactory $resultFactory)
-    {
-        $this->resultFactory = $resultFactory;
-    }
+    public function __construct(protected RawFactory $resultFactory) {}
 
     public function execute()
     {
